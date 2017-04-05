@@ -125,82 +125,81 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <TargetName>lib$(ProjectName)d</TargetName>
-    <OutDir Condition="'$(ConfigurationType)'=='StaticLibrary'">$(ProjectDir)..\..\..\..\build\msvc\lib\$(PlatformTarget)\</OutDir>
-    <OutDir Condition="'$(ConfigurationType)'=='DynamicLibrary'">$(ProjectDir)..\..\..\..\build\msvc\bin\$(PlatformTarget)\</OutDir>
+    <OutDir>$(ProjectDir)..\..\..\build\msvc\lib\$(PlatformTarget)\</OutDir>
     <IntDir>$(OutDir)..\..\obj\$(PlatformTarget)\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</IntDir>
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <TargetName>lib$(ProjectName)d</TargetName>
-    <OutDir Condition="'$(ConfigurationType)'=='StaticLibrary'">$(ProjectDir)..\..\..\..\build\msvc\lib\$(PlatformTarget)\</OutDir>
-    <OutDir Condition="'$(ConfigurationType)'=='DynamicLibrary'">$(ProjectDir)..\..\..\..\build\msvc\bin\$(PlatformTarget)\</OutDir>
+    <OutDir>$(ProjectDir)..\..\..\build\msvc\lib\$(PlatformTarget)\</OutDir>
     <IntDir>$(OutDir)..\..\obj\$(PlatformTarget)\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</IntDir>
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <TargetName>lib$(ProjectName)</TargetName>
-    <OutDir Condition="'$(ConfigurationType)'=='StaticLibrary'">$(ProjectDir)..\..\..\..\build\msvc\lib\$(PlatformTarget)\</OutDir>
-    <OutDir Condition="'$(ConfigurationType)'=='DynamicLibrary'">$(ProjectDir)..\..\..\..\build\msvc\bin\$(PlatformTarget)\</OutDir>
+    <OutDir>$(ProjectDir)..\..\..\build\msvc\lib\$(PlatformTarget)\</OutDir>
     <IntDir>$(OutDir)..\..\obj\$(PlatformTarget)\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <TargetName>lib$(ProjectName)</TargetName>
-    <OutDir Condition="'$(ConfigurationType)'=='StaticLibrary'">$(ProjectDir)..\..\..\..\build\msvc\lib\$(PlatformTarget)\</OutDir>
-    <OutDir Condition="'$(ConfigurationType)'=='DynamicLibrary'">$(ProjectDir)..\..\..\..\build\msvc\bin\$(PlatformTarget)\</OutDir>
+    <OutDir>$(ProjectDir)..\..\..\build\msvc\lib\$(PlatformTarget)\</OutDir>
     <IntDir>$(OutDir)..\..\obj\$(PlatformTarget)\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">
     <TargetName>$(ProjectName)d</TargetName>
-    <OutDir Condition="'$(ConfigurationType)'=='StaticLibrary'">$(ProjectDir)..\..\..\..\build\msvc\lib\$(PlatformTarget)\</OutDir>
-    <OutDir Condition="'$(ConfigurationType)'=='DynamicLibrary'">$(ProjectDir)..\..\..\..\build\msvc\bin\$(PlatformTarget)\</OutDir>
+    <OutDir>$(ProjectDir)..\..\..\build\msvc\bin\$(PlatformTarget)\</OutDir>
     <IntDir>$(OutDir)..\..\obj\$(PlatformTarget)\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</IntDir>
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">
     <TargetName>$(ProjectName)d</TargetName>
-    <OutDir Condition="'$(ConfigurationType)'=='StaticLibrary'">$(ProjectDir)..\..\..\..\build\msvc\lib\$(PlatformTarget)\</OutDir>
-    <OutDir Condition="'$(ConfigurationType)'=='DynamicLibrary'">$(ProjectDir)..\..\..\..\build\msvc\bin\$(PlatformTarget)\</OutDir>
+    <OutDir>$(ProjectDir)..\..\..\build\msvc\bin\$(PlatformTarget)\</OutDir>
     <IntDir>$(OutDir)..\..\obj\$(PlatformTarget)\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</IntDir>
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">
     <TargetName>$(ProjectName)</TargetName>
-    <OutDir Condition="'$(ConfigurationType)'=='StaticLibrary'">$(ProjectDir)..\..\..\..\build\msvc\lib\$(PlatformTarget)\</OutDir>
-    <OutDir Condition="'$(ConfigurationType)'=='DynamicLibrary'">$(ProjectDir)..\..\..\..\build\msvc\bin\$(PlatformTarget)\</OutDir>
+    <OutDir>$(ProjectDir)..\..\..\build\msvc\bin\$(PlatformTarget)\</OutDir>
     <IntDir>$(OutDir)..\..\obj\$(PlatformTarget)\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">
     <TargetName>$(ProjectName)</TargetName>
-    <OutDir Condition="'$(ConfigurationType)'=='StaticLibrary'">$(ProjectDir)..\..\..\..\build\msvc\lib\$(PlatformTarget)\</OutDir>
-    <OutDir Condition="'$(ConfigurationType)'=='DynamicLibrary'">$(ProjectDir)..\..\..\..\build\msvc\bin\$(PlatformTarget)\</OutDir>
+    <OutDir>$(ProjectDir)..\..\..\build\msvc\bin\$(PlatformTarget)\</OutDir>
     <IntDir>$(OutDir)..\..\obj\$(PlatformTarget)\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <PrecompiledHeader />
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\include;$(OutDir)..\..\include\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <ProgramDataBaseFileName>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).pdb</ProgramDataBaseFileName>
-      <PreprocessorDefinitions>_WINDOWS;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <BrowseInformationFile>$(IntDir)bsc\</BrowseInformationFile>
-      <BrowseInformation>true</BrowseInformation>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\include;$(OutDir)..\..\include\zlib;C:\projects\build\msvc\include\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <PreprocessorDefinitions>_WINDOWS;WIN32;_DEBUG;DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerOutput>AssemblyAndSourceCode</AssemblerOutput>
+      <AssemblerListingLocation>$(OutDir)..\..\asm\$(PlatformTarget)\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</AssemblerListingLocation>
+      <OmitFramePointers>false</OmitFramePointers>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <MultiProcessorCompilation>false</MultiProcessorCompilation>
+      <MinimalRebuild>true</MinimalRebuild>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <StringPooling>false</StringPooling>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
     </ClCompile>
     <Lib>
       <TargetMachine>MachineX86</TargetMachine>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <AdditionalLibraryDirectories>$(OutDir)..\..\lib\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>libzlibd.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
-    <Bscmake>
-      <PreserveSbr>true</PreserveSbr>
-    </Bscmake>
     <PreBuildEvent>
       <Command>
 IF EXIST "$(ProjectDir)..\..\pnglibconf.h" (
@@ -240,25 +239,32 @@ ENDLOCAL
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <PrecompiledHeader />
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <PreprocessorDefinitions>_WINDOWS;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\include;$(OutDir)..\..\include\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <ProgramDataBaseFileName>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).pdb</ProgramDataBaseFileName>
-      <BrowseInformationFile>$(IntDir)bsc\</BrowseInformationFile>
-      <BrowseInformation>true</BrowseInformation>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PreprocessorDefinitions>_WINDOWS;WIN32;_DEBUG;DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\include;$(OutDir)..\..\include\zlib;C:\projects\build\msvc\include\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <AssemblerOutput>AssemblyAndSourceCode</AssemblerOutput>
+      <AssemblerListingLocation>$(OutDir)..\..\asm\$(PlatformTarget)\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</AssemblerListingLocation>
+      <OmitFramePointers>false</OmitFramePointers>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <MultiProcessorCompilation>false</MultiProcessorCompilation>
+      <MinimalRebuild>true</MinimalRebuild>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
     </ClCompile>
     <Lib>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <AdditionalLibraryDirectories>$(OutDir)..\..\lib\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>libzlibd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <TargetMachine>MachineX64</TargetMachine>
     </Lib>
-    <Bscmake>
-      <PreserveSbr>true</PreserveSbr>
-    </Bscmake>
     <PreBuildEvent>
       <Command>
 IF EXIST "$(ProjectDir)..\..\pnglibconf.h" (
@@ -298,28 +304,34 @@ ENDLOCAL
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <PrecompiledHeader />
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\include;$(OutDir)..\..\include\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <ProgramDataBaseFileName>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).pdb</ProgramDataBaseFileName>
-      <PreprocessorDefinitions>_WINDOWS;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <BrowseInformationFile>$(IntDir)bsc\</BrowseInformationFile>
-      <BrowseInformation>true</BrowseInformation>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <PreprocessorDefinitions>_WINDOWS;WIN32;_NDEBUG;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BrowseInformation>false</BrowseInformation>
+      <AssemblerOutput>AssemblyAndSourceCode</AssemblerOutput>
+      <AssemblerListingLocation>$(OutDir)..\..\asm\$(PlatformTarget)\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <StringPooling>true</StringPooling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
     </ClCompile>
     <Lib>
       <TargetMachine>MachineX86</TargetMachine>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <AdditionalLibraryDirectories>$(OutDir)..\..\lib\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>libzlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
-    <Bscmake>
-      <PreserveSbr>true</PreserveSbr>
-    </Bscmake>
     <PreBuildEvent>
       <Command>
 IF EXIST "$(ProjectDir)..\..\pnglibconf.h" (
@@ -359,27 +371,33 @@ ENDLOCAL
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <PrecompiledHeader />
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\include;$(OutDir)..\..\include\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <ProgramDataBaseFileName>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).pdb</ProgramDataBaseFileName>
-      <PreprocessorDefinitions>_WINDOWS;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <BrowseInformationFile>$(IntDir)bsc\</BrowseInformationFile>
-      <BrowseInformation>true</BrowseInformation>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <PreprocessorDefinitions>_WINDOWS;WIN32;_NDEBUG;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BrowseInformation>false</BrowseInformation>
+      <AssemblerOutput>AssemblyAndSourceCode</AssemblerOutput>
+      <AssemblerListingLocation>$(OutDir)..\..\asm\$(PlatformTarget)\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MinimalRebuild>false</MinimalRebuild>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <StringPooling>true</StringPooling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
     </ClCompile>
     <Lib>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <AdditionalLibraryDirectories>$(OutDir)..\..\lib\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>libzlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <TargetMachine>MachineX64</TargetMachine>
     </Lib>
-    <Bscmake>
-      <PreserveSbr>true</PreserveSbr>
-    </Bscmake>
     <PreBuildEvent>
       <Command>
 IF EXIST "$(ProjectDir)..\..\pnglibconf.h" (
@@ -419,30 +437,37 @@ ENDLOCAL
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">
     <ClCompile>
-      <PrecompiledHeader />
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\include;$(OutDir)..\..\include\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
-      <PreprocessorDefinitions>_DEBUG;_WINDOWS;_USRDLL;WIN32;DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <BrowseInformationFile>$(IntDir)bsc\</BrowseInformationFile>
-      <BrowseInformation>true</BrowseInformation>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <PreprocessorDefinitions>_WINDOWS;WIN32;_DEBUG;DEBUG;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BrowseInformation>false</BrowseInformation>
+      <AssemblerOutput>AssemblyAndSourceCode</AssemblerOutput>
+      <AssemblerListingLocation>$(OutDir)..\..\asm\$(PlatformTarget)\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</AssemblerListingLocation>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <MultiProcessorCompilation>false</MultiProcessorCompilation>
+      <MinimalRebuild>true</MinimalRebuild>
+      <OmitFramePointers>false</OmitFramePointers>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
-      <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <ImportLibrary>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
       <ProfileGuidedDatabase>$(IntDir)$(TargetName).pgd</ProfileGuidedDatabase>
-      <ProgramDatabaseFile>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
       <AdditionalLibraryDirectories>$(OutDir)..\..\lib\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>zlibd.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <LargeAddressAware>true</LargeAddressAware>
     </Link>
-    <Bscmake>
-      <PreserveSbr>true</PreserveSbr>
-    </Bscmake>
     <PreBuildEvent>
       <Command>
 IF EXIST "$(ProjectDir)..\..\pnglibconf.h" (
@@ -482,29 +507,36 @@ ENDLOCAL
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">
     <ClCompile>
-      <PrecompiledHeader />
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\include;$(OutDir)..\..\include\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
-      <PreprocessorDefinitions>_DEBUG;_WINDOWS;_USRDLL;WIN32;DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <BrowseInformationFile>$(IntDir)bsc\</BrowseInformationFile>
-      <BrowseInformation>true</BrowseInformation>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <PreprocessorDefinitions>_WINDOWS;WIN32;_DEBUG;DEBUG;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BrowseInformation>false</BrowseInformation>
+      <AssemblerOutput>AssemblyAndSourceCode</AssemblerOutput>
+      <AssemblerListingLocation>$(OutDir)..\..\asm\$(PlatformTarget)\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</AssemblerListingLocation>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <MultiProcessorCompilation>false</MultiProcessorCompilation>
+      <MinimalRebuild>true</MinimalRebuild>
+      <OmitFramePointers>false</OmitFramePointers>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
-      <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <ImportLibrary>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
       <ProfileGuidedDatabase>$(IntDir)$(TargetName).pgd</ProfileGuidedDatabase>
-      <ProgramDatabaseFile>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
       <AdditionalLibraryDirectories>$(OutDir)..\..\lib\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>zlibd.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
-    <Bscmake>
-      <PreserveSbr>true</PreserveSbr>
-    </Bscmake>
     <PreBuildEvent>
       <Command>
 IF EXIST "$(ProjectDir)..\..\pnglibconf.h" (
@@ -544,17 +576,25 @@ ENDLOCAL
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">
     <ClCompile>
-      <PrecompiledHeader />
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\include;$(OutDir)..\..\include\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <BrowseInformationFile>$(IntDir)bsc\</BrowseInformationFile>
-      <BrowseInformation>true</BrowseInformation>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <PreprocessorDefinitions>_WINDOWS;WIN32;_NDEBUG;NDEBUG;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BrowseInformation>false</BrowseInformation>
+      <AssemblerOutput>AssemblyAndSourceCode</AssemblerOutput>
+      <AssemblerListingLocation>$(OutDir)..\..\asm\$(PlatformTarget)\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MinimalRebuild>false</MinimalRebuild>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <StringPooling>true</StringPooling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -562,16 +602,13 @@ ENDLOCAL
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <ImportLibrary>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
       <ProfileGuidedDatabase>$(IntDir)$(TargetName).pgd</ProfileGuidedDatabase>
-      <ProgramDatabaseFile>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
       <AdditionalLibraryDirectories>$(OutDir)..\..\lib\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <LargeAddressAware>true</LargeAddressAware>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
-    <Bscmake>
-      <PreserveSbr>true</PreserveSbr>
-    </Bscmake>
     <PreBuildEvent>
       <Command>
 IF EXIST "$(ProjectDir)..\..\pnglibconf.h" (
@@ -611,17 +648,25 @@ ENDLOCAL
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">
     <ClCompile>
-      <PrecompiledHeader />
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\include;$(OutDir)..\..\include\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
-      <PreprocessorDefinitions>NDEBUG;_WINDOWS;_USRDLL;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <BrowseInformationFile>$(IntDir)bsc\</BrowseInformationFile>
-      <BrowseInformation>true</BrowseInformation>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <PreprocessorDefinitions>_WINDOWS;WIN32;_NDEBUG;NDEBUG;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BrowseInformation>false</BrowseInformation>
+      <AssemblerOutput>AssemblyAndSourceCode</AssemblerOutput>
+      <AssemblerListingLocation>$(OutDir)..\..\asm\$(PlatformTarget)\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MinimalRebuild>false</MinimalRebuild>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <StringPooling>true</StringPooling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -629,15 +674,12 @@ ENDLOCAL
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <ImportLibrary>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
       <ProfileGuidedDatabase>$(IntDir)$(TargetName).pgd</ProfileGuidedDatabase>
-      <ProgramDatabaseFile>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
       <AdditionalLibraryDirectories>$(OutDir)..\..\lib\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
-    <Bscmake>
-      <PreserveSbr>true</PreserveSbr>
-    </Bscmake>
     <PreBuildEvent>
       <Command>
 IF EXIST "$(ProjectDir)..\..\pnglibconf.h" (
@@ -699,6 +741,13 @@ ENDLOCAL
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\png.h" />
+    <ClInclude Include="..\..\pngconf.h" />
+    <ClInclude Include="..\..\pnginfo.h" />
+    <ClInclude Include="..\..\pngpriv.h" />
+    <ClInclude Include="..\..\pngstruct.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
